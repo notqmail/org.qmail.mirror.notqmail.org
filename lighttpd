@@ -1,7 +1,12 @@
-var.sitecanonical	= "qmail.notqmail.org"
-var.siteroot		= "/home/notqmail/sites/notqmail.org/qmail/"
+var.sitecanonical	= "org.qmail.mirror.notqmail.org"
+var.siteroot		= "/home/notqmail/sites/notqmail.org/org.qmail.mirror/"
 var.siteport		= 36386
 var.siteport_tls	= 36408
 
 include			"/etc/lighttpd/schmonz_ssl.conf"
 include			"/etc/lighttpd/schmonz_hosted.conf"
+
+mimetype.assign		+= (
+	"top.html"	=> "text/html; charset=utf-8",
+	"news.html"	=> "text/html; charset=utf-8",
+)
